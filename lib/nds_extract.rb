@@ -56,7 +56,6 @@ def movies_with_director_key(name, movies_collection)
     movies_collection_with_director.push(movie_with_director_name(name, movie))
   end
   
-  pp movies_collection_with_director
   return movies_collection_with_director
 end
 
