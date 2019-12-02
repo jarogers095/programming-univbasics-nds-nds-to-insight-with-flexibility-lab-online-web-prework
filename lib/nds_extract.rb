@@ -1,5 +1,6 @@
 # Provided, don't edit
 require 'directors_database'
+require 'pp'
 
 # A method we're giving you. This "flattens"  Arrays of Arrays so: [[1,2],
 # [3,4,5], [6]] => [1,2,3,4,5,6].
@@ -49,8 +50,14 @@ def movies_with_director_key(name, movies_collection)
   # :director_name key. This addition can be done by using the provided
   # movie_with_director_name method
   
+  movies_collection_with_director = []
+  
   movies_collection.each do |movie|
-    
+    movies_collection_with_director.push(movie_with_director_name(name, movie))
+  end
+  
+  pp movies_collection_with_director
+  return movies_collection_with_director
 end
 
 
