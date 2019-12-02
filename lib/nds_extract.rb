@@ -106,6 +106,7 @@ def movies_with_directors_set(source)
     end
   end
   
+  pp movies_with_directors_aoh
   return movies_with_directors_aoh
 end
 
