@@ -89,11 +89,7 @@ def movies_with_directors_set(source)
   movies_with_directors_aoa = []
   
   source.each do |director|
-    
-    director[:movies].each do |movie|
-      movie[director[:name]] = director[:name]
-    end
-    movies_with_directors_aoa.push(movie)
+    movies_with_directors_aoa.push()
   end
   
   pp movies_with_directors_aoa
