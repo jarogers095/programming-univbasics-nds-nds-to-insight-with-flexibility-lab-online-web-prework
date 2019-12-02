@@ -74,8 +74,6 @@ def gross_per_studio(collection)
   # total of all the worldwide_gross numbers for every movie in the input Hash
   studio_grosses_hash = {}
   
-  pp collection
-  
   collection.each do |movie|
     if studio_grosses_hash.key?(movie[:studio])
       studio_grosses_hash[movie[:studio]] += movie[:worldwide_gross]
@@ -84,6 +82,7 @@ def gross_per_studio(collection)
     end
   end
   
+  pp studio_grosses_hash
   return studio_grosses_hash
 end
 
