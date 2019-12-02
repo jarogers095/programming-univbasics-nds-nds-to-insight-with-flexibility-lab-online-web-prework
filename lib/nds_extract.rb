@@ -75,8 +75,15 @@ def gross_per_studio(collection)
   studio_grosses_hash = {}
   
   collection.each do |movie|
-    if studio_grosses_hash[movie[:studio]]
-    studio_grosses_hash[movie[:studio]]
+    if studio_grosses_hash.key?(movie[:studio])
+      studio_grosses_hash[movie[:studio]] += movie[:worldwide_gross]
+    else
+      studio_grosses_hash[movie[:studio]] = 0
+    end
+  end
+  
+  pp studio_grosses_hash
+  return studio_grosses_hash
 end
 
 def movies_with_directors_set(source)
